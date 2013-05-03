@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <div class="container">
 	
@@ -28,8 +27,8 @@
 			
 			<div class="row-fluid">
 				<div class="span12">
-					<div id="link-heading-show"><h5>Link:</h5></d>
-					<br> <%= @job.link %>
+					<div id="link-heading-show"><h5>Link to apply:</h5></d>
+					<br> <%= link_to "#{@job.link}", @job.link %>
 				</div>
 			</div>
 			
