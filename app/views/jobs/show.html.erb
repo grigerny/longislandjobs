@@ -1,5 +1,49 @@
 <p id="notice"><%= notice %></p>
 
-
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+<div class="container">
+	
+	<div class="row-fluid">
+		<div class="span9">
+			<div id="new-jobs-heading">
+				<legend>
+						<%= @job.title %>
+						<div id="job-datetime-created-show">
+							added <%= time_ago_in_words(@job.created_at).gsub("about", "") %> ago
+						</div>
+				</legend>
+			</div>	
+		
+			<div class="row-fluid">
+				<div class="span12">
+					<%= @job.description %>
+				</div>
+			</div>
+		</div>	
+			
+	
+		<div class="span3">
+			<div id="contact-heading">
+				<legend>Contact</legend>
+			</div>	
+			
+			<div class="row-fluid">
+				<div class="span12">
+					<div id="link-heading-show"><h5>Link:</h5></d>
+					<br> <%= @job.link %>
+				</div>
+			</div>
+			
+			<div class="row-fluid">
+				<div class="span12">
+					<div id="contact-heading-show"><h5>Contact:</h5></d>
+					<br> <%= @job.contact_info %>
+				</div>
+			</div>
+			
+			
+	</div>	
+	
+	</div>				
+				
+<div>			
+				
