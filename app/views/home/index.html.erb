@@ -21,7 +21,7 @@
 										
 		
 							<div id="job-description">
-					 		<%= job.description %>
+									<%= truncate("#{job.description}", :length => 400, :omission => '... (continued)') %>
 							</div>
 							<hr>
 					 		<% end %>
