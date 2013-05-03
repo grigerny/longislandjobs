@@ -14,13 +14,8 @@
 #
 development:
   adapter: postgresql
-  encoding: unicode
-  database: longislandjoblink
-  pool: 5
-  username: postgres
-  password: Tashkent123
+  database: longislandjobs
   host: localhost
-  port: 5432
   
 
   # Connect on a TCP socket. Omitted by default since the client uses a
