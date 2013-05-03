@@ -12,13 +12,25 @@
   <% end %>
 	<div class="row-fluid">
 		<div class="span12">
-			Job Title: <%= f.text_field :title, :class => "job-title-field" %><br>
+			Job Title: <%= f.text_field :title, :class => "job-title-field", :placeholder => "Required Field" %><br>
 		</div>
 	</div>
 
 	<div class="row-fluid">
 		<div class="span12">
-			Description: <%= f.text_area :description, :class => "job-description-field" %>
+			Description: <%= f.text_area :description, :class => "job-description-field", :placeholder => "Required Field"  %>
+		</div>
+	</div>
+	
+	<div class="row-fluid">
+		<div class="span12">
+			Web Link: <%= f.text_field :link, :class => "job-link-field" %><br>
+		</div>
+	</div>
+	
+	<div class="row-fluid">
+		<div class="span12">
+			Contact Info: <%= f.text_field :contact_info, :class => "job-contact_info-field", :placeholder => "Required Field"  %><br>
 		</div>
 	</div>
 	
