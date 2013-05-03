@@ -1,4 +1,7 @@
 Longislandjoblink::Application.routes.draw do
+  resources :newsletters
+
+
   resources :jobs
 
 
