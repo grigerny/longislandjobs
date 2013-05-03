@@ -2,7 +2,7 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    redirect_to root_url
+    @jobs = Job.all
   end
 
   # GET /jobs/1

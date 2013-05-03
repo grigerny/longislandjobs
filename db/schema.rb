@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130503184011) do
+ActiveRecord::Schema.define(:version => 20130503202710) do
 
   create_table "homes", :force => true do |t|
     t.string   "index"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20130503184011) do
     t.text     "description"
     t.string   "link"
     t.string   "contact_info"
+    t.string   "field"
   end
 
   create_table "newsletters", :force => true do |t|

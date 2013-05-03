@@ -1,21 +1,43 @@
-<h1>Listing jobs</h1>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @jobs.each do |job| %>
-  <tr>
-    <td><%= link_to 'Show', job %></td>
-    <td><%= link_to 'Edit', edit_job_path(job) %></td>
-    <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Job', new_job_path %>
+<div class="container">
+	
+	<div class="row-fluid">
+		<div class="span9">
+			<div id="new-jobs-heading">
+				<legend>Jobs 
+					<%= link_to "Post Job", new_job_path, :class => "post-jobs" %>
+				</legend>
+				
+				
+				<div class="row-fluid">
+					<div class="span12">
+						<% @jobs.reverse.each do |job| %>
+					 		<div id="job-title">
+								<h4><%= link_to "#{job.title}", job %><h4>
+							</div>
+					
+								<div id="job-datetime-created">
+									added <%= time_ago_in_words(job.created_at).gsub("about", "") %> ago
+								</div>
+										
+		
+							<div id="job-description">
+									<%= truncate("#{job.description}", :length => 400, :omission => '... (continued)') %>
+							</div>
+							<hr>
+					 		<% end %>
+					</div>
+				</div>
+				
+				
+			</div>	
+		</div>	
+		
+		<div class="span3">
+			<div id="whatsnew-heading">
+				<legend>News</legend>
+				<h5>Join our mailing list</h5>
+				<%= render "newsletters/form" %>
+			</div>	
+		</div>
+	
+</div>	

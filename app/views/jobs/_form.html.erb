@@ -14,6 +14,13 @@
 
 	<div class="row-fluid">
 		<div class="span9">
+			Field of work:<br>
+			<%= f.select :field, [['Administration', 1], ['Art', 2], ['Business Development', 3], ['Finance', 4], ['Healthcare', 5], ['Labor', 6], ['Technology', 7]], :class => "job-field-select",  :placeholder => "Required Field" %> <br>
+		</div>
+	</div>
+	
+	<div class="row-fluid">
+		<div class="span9">
 			Job Title: <%= f.text_field :title, :class => "job-title-field", :placeholder => "Required Field" %><br>
 		</div>
 	</div>
