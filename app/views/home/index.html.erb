@@ -1,27 +1,27 @@
-<div class="row-fluid">
-		<div id="top-menu">	
-			<div class="span9">
-				<div id="logo">
-					<h3>Long Island Listing</h3>
-				</div>	
-			</div>	
-			<div class="span3">
-				<div id="post-job">
-					<h3><%= link_to "Post Job", new_job_path %></h3>
-				</div>
-			</div>	
-		</div>		
-</div>
-
-
 <div class="container">
 	
 	<div class="row-fluid">
 		<div class="span9">
 			<div id="new-jobs-heading">
-				<legend>New Jobs</legend>
+				<legend>Job Listing</legend>
+				
+				<div class="row-fluid">
+					<div class="span12">
+						<% @jobs.each do |job| %>
+					 		<div id="job-title">
+							<h4><%= link_to "#{job.title}", job %><h4>
+							</div>
+					 		<%= job.description %>
+							<hr>
+					 		<% end %>
+					</div>
+				</div>
+				
+				
 			</div>	
 		</div>
+		
+		
 		
 		<div class="span3">
 			<div id="whatsnew-heading">
