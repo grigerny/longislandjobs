@@ -1,5 +1,5 @@
 class Job < ActiveRecord::Base
-  attr_accessible :title, :description, :link, :contact_info
+  attr_accessible :title, :description, :link, :contact_info, :field
   
   validates_presence_of :title, :description, :contact_info
   validates_length_of :title, :maximum => 60
