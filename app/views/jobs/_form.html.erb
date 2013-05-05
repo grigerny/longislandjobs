@@ -1,4 +1,4 @@
-<%= form_for(@job) do |f| %>
+<%= form_for([@location, @job]) do |f| %>
   <% if @job.errors.any? %>
     
 <div id="error_explanation">
@@ -43,7 +43,7 @@
 		</div>
 	</div>
 	
-	We know these are annoying but we have to make sure you are a real person!
+	We know these are annoying but we have to make sure you are a real person :)
 	<%= recaptcha_tags %>
 	
 	<div class="row-fluid">

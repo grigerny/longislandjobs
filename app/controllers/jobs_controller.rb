@@ -19,7 +19,8 @@ class JobsController < ApplicationController
   # GET /jobs/new
   # GET /jobs/new.json
   def new
-    @job = Job.new
+    @location = Location.find(params[:location_id])
+    @job = @location.jobs.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,11 +36,12 @@ class JobsController < ApplicationController
   # POST /jobs
   # POST /jobs.json
   def create
-    @job = Job.new(params[:job])
+    @location = Location.find(params[:location_id])
+    @job = @location.jobs.build(params[:job])
 
     respond_to do |format|
       if @job.save and verify_recaptcha() 
-        format.html { redirect_to root_url, notice: 'Job was successfully created.' }
+        format.html { redirect_to location_jobs_path(@location), notice: 'Job was successfully created.' }
         format.json { render json: @job, status: :created, location: @job }
       else
         format.html { render action: "new" }

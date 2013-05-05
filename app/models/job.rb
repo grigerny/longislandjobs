@@ -1,4 +1,5 @@
 class Job < ActiveRecord::Base
+  belongs_to :location
   attr_accessible :title, :description, :link, :contact_info, :field
   
   validates_presence_of :title, :description, :contact_info
