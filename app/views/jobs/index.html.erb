@@ -12,7 +12,7 @@
 					<div class="span12">
 						<% @jobs.reverse.each do |job| %>
 					 		<div id="job-title">
-								<h4><%= job.title %><h4>
+								<h4><%= link_to "#{job.title}", location_job_path(:viewing,job)%><h4>
 							</div>
 							
 							<div id="job-field">
