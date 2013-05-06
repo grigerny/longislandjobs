@@ -7,6 +7,11 @@
 					<%= link_to "Post Job", new_location_job_path, :class => "post-jobs" %>
 				</legend>
 				
+				<%= search_form_for @search, :url => location_jobs_path do |f| %>
+				  <%= f.text_field :title_cont, :class => "search-bar" %>
+				  <%= f.submit %>
+				<% end %>
+				
 				
 				<div class="row-fluid">
 					<div class="span12">

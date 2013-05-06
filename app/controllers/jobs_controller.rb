@@ -2,7 +2,8 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    @search = Job.search(params[:q])
+    @jobs = @search.result(:distinct => true)
   end
 
   # GET /jobs/1
