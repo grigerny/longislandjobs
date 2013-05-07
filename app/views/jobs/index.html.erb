@@ -30,7 +30,7 @@
 										
 		
 							<div id="job-description">
-									<%= simple_format (truncate("#{job.description}", :length => 400, :omission => '... (continued)')) %>
+									<%= truncate("#{job.description}", :length => 400, :omission => '... (continued)') %>
 							</div>
 							<hr>
 					 		<% end %>
