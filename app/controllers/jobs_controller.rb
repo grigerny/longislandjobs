@@ -2,6 +2,7 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
+    @location = Location.find(params[:location_id])
     @search = Job.search(params[:q])
     @jobs = @search.result(:distinct => true)
   end
@@ -31,6 +32,7 @@ class JobsController < ApplicationController
 
   # GET /jobs/1/edit
   def edit
+    @location = Location.find(params[:location_id])
     @job = Job.find(params[:id])
   end
 

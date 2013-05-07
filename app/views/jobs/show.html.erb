@@ -14,7 +14,7 @@
 		
 			<div class="row-fluid">
 				<div class="span12">
-					<%= @job.description %>
+					<%= simple_format (@job.description) %>
 				</div>
 			</div>
 		</div>	
@@ -35,7 +35,7 @@
 			<div class="row-fluid">
 				<div class="span12">
 					<div id="contact-heading-show"><h5>Contact:</h5></d>
-					<br> <%= @job.contact_info %>
+					<br> <%= simple_format (@job.contact_info) %>
 				</div>
 			</div>
 			
