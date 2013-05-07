@@ -3,7 +3,7 @@ Longislandjoblink::Application.routes.draw do
   get "home/index"
     
   resources :locations, :only => [ :index] do 
-    resources :jobs, :only => [ :index, :show ]
+    resources :jobs, :only => [ :index, :show, :new, :create]
   end
 
   resources :newsletters
