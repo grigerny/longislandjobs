@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   def index
     @location = Location.find(params[:location_id])
     @search = Job.search(params[:q])
-    @jobs = @search.result(:distinct => true)
+    @jobs = @search.result(:distinct => true).paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /jobs/1
