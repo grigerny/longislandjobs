@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130511173003) do
+ActiveRecord::Schema.define(:version => 20130511174315) do
 
   create_table "homes", :force => true do |t|
     t.string   "index"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(:version => 20130511173003) do
     t.string   "email"
     t.string   "website"
     t.string   "location"
-    t.text     "commments"
+    t.text     "comment"
     t.date     "date"
     t.integer  "user_id"
   end
