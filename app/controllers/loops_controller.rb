@@ -1,8 +1,10 @@
 class LoopsController < ApplicationController
+  before_filter :authenticate_user!
   # GET /loops
   # GET /loops.json
   def index
-    @loops = Loop.all
+    @user = current_user
+    @loops = @user.loops.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +15,8 @@ class LoopsController < ApplicationController
   # GET /loops/1
   # GET /loops/1.json
   def show
-    @loop = Loop.find(params[:id])
+    @user = current_user
+    @loop = @user.loops.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -41,6 +44,8 @@ class LoopsController < ApplicationController
   # POST /loops.json
   def create
     @loop = Loop.new(params[:loop])
+    @loop.user = current_user
+    
 
     respond_to do |format|
       if @loop.save
