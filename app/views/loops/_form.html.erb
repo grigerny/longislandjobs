@@ -10,8 +10,18 @@
       </ul>
     </div>
   <% end %>
+	
+	First name: <%= f.text_field :firstname %><br>
+	Last name: <%= f.text_field :lastname %><br>
+	Title: <%= f.text_field :title %><br>
+	Phone Number: <%= f.text_field :phone %><br>
+	Email: <%= f.text_field :email %><br>
+	Location where we met: <%= f.text_field :location %><br>
+	Comment: <%= f.text_field :comment %><br>
+	Date: <%= select_date Date.today, :order => [:month, :day, :year], :prefix => :date %>
+	
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Add contact to My Loop" %>
   </div>
 <% end %>
