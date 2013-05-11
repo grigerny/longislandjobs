@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130504225408) do
+ActiveRecord::Schema.define(:version => 20130511173003) do
 
   create_table "homes", :force => true do |t|
     t.string   "index"
@@ -34,6 +34,21 @@ ActiveRecord::Schema.define(:version => 20130504225408) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "city"
+  end
+
+  create_table "loops", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "title"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "website"
+    t.string   "location"
+    t.text     "commments"
+    t.date     "date"
+    t.integer  "user_id"
   end
 
   create_table "newsletters", :force => true do |t|

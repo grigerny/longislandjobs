@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Schmooze Board</title>
+  <title>NetworkingLoop</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
+<div id="wrapper">
+
 <body>
 
 	
@@ -13,7 +16,6 @@
 	<p id="notice"><%= notice %></p>
 	 <% end %>
 	
-
 	<div class="row-fluid">
 			<div id="top-menu">	
 				
@@ -35,8 +37,16 @@
 				
 			</div>		
 	</div>
+	
+<div class='bottom-menu'>
+</div>	
 
+	
 <%= yield %>
 
+
+
 </body>
+
+</div>
 </html>

@@ -1,0 +1,21 @@
+<h1>Listing loops</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @loops.each do |loop| %>
+  <tr>
+    <td><%= link_to 'Show', loop %></td>
+    <td><%= link_to 'Edit', edit_loop_path(loop) %></td>
+    <td><%= link_to 'Destroy', loop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Loop', new_loop_path %>

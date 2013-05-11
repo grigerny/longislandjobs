@@ -2,7 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+.bottom-menu{
+	position:absolute;
+	background-color:#EEEEEE;
+	height:100px;
+	width:100%;
+	border-top:solid 1px lightgray;
+	bottom:0;
+}
 
 #top-menu{
 	background-color:#F3F3F3;

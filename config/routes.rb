@@ -1,5 +1,7 @@
 Longislandjoblink::Application.routes.draw do
   
+  resources :loops
+
   get "home/index"
     
   resources :locations, :only => [ :index] do 
