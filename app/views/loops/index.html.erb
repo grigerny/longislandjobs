@@ -9,27 +9,23 @@
 				</div>
 			</legend>
 				<% @loops.each do |loop| %>
+				<div id="loop-time-ago">
+		        Met <%= time_ago_in_words(loop.date) rescue nil %> ago
+				</div>
 					<div id="loop-name">
-					<%= loop.firstname %> <%= loop.lastname %>
+					<%= link_to loop.firstname + " " + loop.lastname, loop %>
 					</div>
 					<div id="loop-title">
-					[<%= loop.title %>]
-					</div>
-					<div id="loop-time-ago">
-			        Met <%= time_ago_in_words(loop.date) rescue nil%> ago at <%= loop.location %>
+					<%= loop.title %>
 					</div>
 					<hr>
-					<% end %>
-
-
+						<% end %>
 	</div>
-
-
 		
 		<div class="span3">
 			<div id="whatsnew-heading">
 				<legend>Stats</legend>
-			
+				<p>You have <%= current_user.loops.count %> networking contacts. </p>
 			</div>	
 		</div>
 	</div>	
