@@ -5,6 +5,10 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
 </head>
 
 <div id="wrapper">
@@ -44,7 +48,9 @@
 					</div>
 					
 					<div id="menu4">
-						<h3><%= link_to "MyLoop", loops_path %> </h3>
+						<%= link_to loops_path, :class => "menu4" do %> 
+							<h3><%= "My Loop" %></h3>
+							<% end %>
 					</div>
 				
 			</div>		

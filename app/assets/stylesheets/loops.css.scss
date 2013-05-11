@@ -1,3 +1,30 @@
 // Place all the styles related to the Loops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#loop-name{
+	color:#0088CC;
+	font-size:18px;
+	font-weight:bold;
+	float:left;
+}
+
+#loop-title{
+	color:#CD816E;
+	margin-left:10px;
+}
+#loop-time-ago{
+	color:#666666;
+}
+
+#add-contact-to-loop{
+	float:right;
+	color:#D18470;
+}
+
+.add-contact-to-loop{
+	color:#D18470;
+}
+.loop-field{
+	width:100%;
+}
+

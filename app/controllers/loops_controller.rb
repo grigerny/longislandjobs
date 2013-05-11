@@ -4,7 +4,7 @@ class LoopsController < ApplicationController
   # GET /loops.json
   def index
     @user = current_user
-    @loops = @user.loops.all
+    @loops = @user.loops.all(:order => :date)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -49,7 +49,7 @@ class LoopsController < ApplicationController
 
     respond_to do |format|
       if @loop.save
-        format.html { redirect_to @loop, notice: 'Loop was successfully created.' }
+        format.html { redirect_to loops_path, notice: 'Loop was successfully created.' }
         format.json { render json: @loop, status: :created, location: @loop }
       else
         format.html { render action: "new" }

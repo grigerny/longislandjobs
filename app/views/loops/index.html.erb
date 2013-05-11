@@ -1,18 +1,36 @@
 <div class="container">
 	<div class="row-fluid">
 		<div class="span9">
-		
-	
-	
-<legend>MyLoops</legend>
-<% @loops.each do |loop| %>
+			<legend>My Loop
+				<div id="add-contact-to-loop">
+				<%= link_to new_loop_path, :class => "add-contact-to-loop" do %>
+				<%= "Add Contact" %>
+				<% end %>
+				</div>
+			</legend>
+				<% @loops.each do |loop| %>
+					<div id="loop-name">
+					<%= loop.firstname %> <%= loop.lastname %>
+					</div>
+					<div id="loop-title">
+					[<%= loop.title %>]
+					</div>
+					<div id="loop-time-ago">
+			        Met <%= time_ago_in_words(loop.date) rescue nil%> ago at <%= loop.location %>
+					</div>
+					<hr>
+					<% end %>
 
-<%= loop.firstname %> <%= loop.lastname%> | <%= loop.title %><br>
-I met <%= loop.firstname %> <%= loop.lastname %> at <%= loop.location %> on <%= loop.date %>
-<br><br>
-<% end %>
-<br><br>
-<%= link_to 'New Loop', new_loop_path %>
+
 	</div>
-</div>
+
+
+		
+		<div class="span3">
+			<div id="whatsnew-heading">
+				<legend>Stats</legend>
+			
+			</div>	
+		</div>
+	</div>	
 </div>
