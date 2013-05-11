@@ -6,16 +6,12 @@
 	
 <legend>MyLoops</legend>
 <% @loops.each do |loop| %>
-I met <%= loop.firstname %> <%= loop.lastname %> at <%= loop.location %> on <%= loop.date %><br><br>
 
-Name: <%= loop.firstname %> <%= loop.lastname%><br>
-Title: <%= loop.title %><br>
-Phone: <%= loop.phone %><br>
-Email: <%= loop.email %><br>
-Comment: <%= loop.comment %><br><br>
+<%= loop.firstname %> <%= loop.lastname%> | <%= loop.title %><br>
+I met <%= loop.firstname %> <%= loop.lastname %> at <%= loop.location %> on <%= loop.date %>
 
-  
 <% end %>
+<br><br>
 <%= link_to 'New Loop', new_loop_path %>
 	</div>
 </div>
