@@ -14,7 +14,7 @@
 
 
 <div class="span9">
-<div class="jobs-form-wrapper">
+	<div class="well">
 	
 	<div class="row-fluid">
 		<div class="span9">
@@ -50,15 +50,10 @@
 	
 	We know these are annoying but we have to make sure you are a real person :)
 	<%= recaptcha_tags %>
+	<%= f.submit "Add Job", :class=>"btn" %>
+
 	
-	<div class="row-fluid">
-		<div class="span9">
-			<div id="new-job-submit">
-	 			<%= f.submit "Add Job", :class=>"btn" %>
-			<div>
-		</div>
 	</div>
+</div>
+
 <% end %>
-	
-</div>
-</div>

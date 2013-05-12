@@ -9,7 +9,9 @@
 				
 				<%= search_form_for @search, :url => location_jobs_path do |f| %>
 				  <%= f.text_field :title_cont, :class => "search-bar", :placeholder => "Search jobs" %>
-				  <%= f.submit %>
+				<div class="jobs-search-submit">
+				  <%= f.submit :class => "btn" %>
+				</div>
 				<% end %>
 				
 				

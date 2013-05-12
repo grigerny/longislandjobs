@@ -61,14 +61,15 @@ a.post-jobs{
 .search-bar{
 	width:50%;
 }
+
+.jobs-search-submit{
+	position:relative;
+	display:inline;
+	top:-5px;
+}
 .will-paginate{
 	background-color:#EEEEEE;
 }
 .page-entries{
 	font-size:12px;
-}
-
-.jobs-form-wrapper{
-	background-color:#EDEDED;
-	padding:20px;
 }
