@@ -9,6 +9,11 @@
 					<div id="job-datetime-created-show">
 						Met <%= time_ago_in_words(@loop.date) %> ago
 					</div>
+					<div id="loop-edit-button">
+					<%= link_to edit_loop_path(@loop), :class => "btn" do %>
+					<%= 'Edit' %>
+					<% end %>
+					</div>
 				</legend>
 			</div>
 	
@@ -42,8 +47,4 @@
 		  </div>	
 			
 	</div>	
-
-
-<%= link_to 'Edit', edit_loop_path(@loop) %> |
-<%= link_to 'Back', loops_path %>
 </div>	

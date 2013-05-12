@@ -1,8 +1,17 @@
-<h1>Editing loop</h1>
+<div class="container">
+<div class="row-fluid">
+	<div class="span9">
+		<div id="new-job">	
+			<legend>Edit Contact
+					<div id="loop-edit-button">
+					<%= link_to @loop, :class => "btn" do %>
+					<%= 'Back' %>
+					<% end %>
+					</div>
+		     </legend>
+		</div>	
+	</div>
+</div>
 
-
-<%= render 'editform' %>
-
-<%= link_to 'Show', @loop %> |
-<%= link_to 'Back', loops_path %>
-
+<%= render 'form' %>
+</div>
