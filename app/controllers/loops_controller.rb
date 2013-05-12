@@ -49,7 +49,7 @@ class LoopsController < ApplicationController
 
     respond_to do |format|
       if @loop.save
-        format.html { redirect_to loops_path, notice: 'Loop was successfully created.' }
+        format.html { redirect_to loops_path, notice: 'New contact was successfully created.' }
         format.json { render json: @loop, status: :created, location: @loop }
       else
         format.html { render action: "new" }
@@ -65,7 +65,7 @@ class LoopsController < ApplicationController
 
     respond_to do |format|
       if @loop.update_attributes(params[:loop])
-        format.html { redirect_to @loop, notice: 'Loop was successfully updated.' }
+        format.html { redirect_to @loop, notice: 'Contact was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

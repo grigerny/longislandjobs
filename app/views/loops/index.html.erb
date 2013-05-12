@@ -25,7 +25,11 @@
 		<div class="span3">
 			<div id="whatsnew-heading">
 				<legend>Stats</legend>
-				<p>You have <%= current_user.loops.count %> networking contacts. </p>
+				<% if current_user.loops.count == 0 %>
+				<p>You have <%= current_user.loops.count %> networking contacts. Click on <%= link_to "Add Contact", new_loop_path %> to start building up your networking contacts.</p>
+				<% else %>
+				<p>You have <%= current_user.loops.count %> networking contacts.</p>
+				<% end %>
 			</div>	
 		</div>
 	</div>	

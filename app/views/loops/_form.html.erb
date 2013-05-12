@@ -14,23 +14,23 @@
 	<div class="row-fluid">
 		<div class="span9">
 			<div class="span6">
-				When we met:<br> <%= f.text_field :date, :class => "datepicker" %>
+				When we met:<br> <%= f.text_field :date, :class => "datepicker", :placeholder => "Required" %>
 			</div>
 		</div>
 	</div>	
 	<div class="row-fluid">
 		<div class="span9">
-			Where we met: <%= f.text_field :location, :class => "loop-field" %><br>
+			Where we met: <%= f.text_field :location, :class => "loop-field", :placeholder => "Required" %><br>
 		</div>
 	</div>
 	<div class="row-fluid">
 		<div class="span9">
 			<div class="span6">
-				First name: <%= f.text_field :firstname, :class => "loop-field" %><br>
+				First name: <%= f.text_field :firstname, :class => "loop-field", :placeholder => "Required" %><br>
 			</div>
 
 			<div class="span6">
-				Last name: <%= f.text_field :lastname, :class => "loop-field" %><br>
+				Last name: <%= f.text_field :lastname, :class => "loop-field", :placeholder => "Required" %><br>
 			</div>
 		</div>
 	</div>
@@ -40,6 +40,9 @@
 			<div class="span6">
 			Title: <%= f.text_field :title, :class => "loop-field" %><br>
 			</div>
+			<div class="span6">
+			Industry: <%= f.text_field :industry, :class => "loop-field" %><br>
+			</div>
 		</div>
 	</div>
 	<div class="row-fluid">
@@ -47,16 +50,14 @@
 			<div class="span6">
 			Phone Number: <%= f.text_field :phone, :class => "loop-field" %><br>
 			</div>
+			<div class="span6">
+			Email: <%= f.text_field :email, :class => "loop-field" %><br>
+			</div>
 		</div>
 	</div>
 	<div class="row-fluid">
 		<div class="span9">
-			<div class="span6">
-			Email: <%= f.text_field :email, :class => "loop-field" %><br>
-			</div>
-			<div class="span6">
 			Website: <%= f.text_field :website, :class => "loop-field" %><br>
-			</div>
 		</div>
 	</div>
 	<div class="row-fluid">

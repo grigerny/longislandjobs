@@ -1,0 +1,85 @@
+
+	<div class="container">
+	<div class="container-css">
+		<div class="row-fluid">
+			<div class="span9">
+				<div id="index-heading">
+					<% if user_signed_in? %>
+					<legend>Welcome <%= current_user.email %>!</legend>
+					 <% else %>
+					<legend>Home</legend>
+					<% end %>
+				</div>	
+
+				<div class="row-fluid">
+					<div class="span12">
+						<div id="jobs-index-body">	
+							<div id="jobs-index-body-heading">
+							</div>	
+							<h4>Job Search</h4>
+							<p>All Job posts are verified; no more get-rich-quick schemes.</p>
+							<div class="coming-soon">
+							<%= "Coming soon".upcase %>
+							</div>
+							<h4>Find Local Networking Events</h4> 
+							<p>Find opportunities to network and gain business connections.</p>
+							<h4>Hire Trusted Professionals</h4>
+							<p>Work with people who are known to be the best at what they do.</p>
+							
+								<div class="row-fluid">
+									<div class="span12">
+											<div class="span9">
+
+
+									<div class="premium-service">
+									<%= "Premium Subscription".upcase %>
+									</div>	
+									<h4>My Loop: Online Networking Relationship Management</h4>
+									<p> Take notes, track conversations and build your network. </p>
+									</div>
+
+										
+										</div>
+									</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>	
+
+		<div class="span3">
+			<div id="whatsnew-heading">
+				<legend>News</legend>
+			</div>	
+			
+			
+			<div class="signin-wrapper">
+			<h4>Sign in</h4>
+			<br>	
+			  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+			  <%= f.email_field :email, :placeholder => "Email", :class => "email-signin" %><br>
+			  <%= f.password_field :password, :placeholder => "Password", :class=> "email-signin" %>
+			  <% if devise_mapping.rememberable? -%>
+			  <%= f.check_box :remember_me %> Remember me
+			  <% end -%>
+			  <div><%= f.submit "Sign in", :class=> "signin-button" %></div>
+			  <% end %>
+
+			<%= render "devise/shared/links" %>
+			</div>
+			<br>
+			
+					<div class="span12">
+					<h5>Join our mailing list</h5>
+					<%= render "newsletters/form" %>
+					</div>
+		
+			</div>
+		</div>
+
+		</div>
+		
+	
+
+</div>

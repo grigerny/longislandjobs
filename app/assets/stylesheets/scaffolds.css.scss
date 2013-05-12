@@ -5,7 +5,7 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  height:1200px;
+  height:1000px;
 }
 
 #wrapper{
@@ -35,8 +35,9 @@ div {
 #notice {
   padding:5px;
   display:auto;
-  color: white;
-  background:#0088CC;
+  color: #454545;
+  background:#ECF7FE;
+  border: 1px solid #C6E1F2;
 }
 
 .field_with_errors {
