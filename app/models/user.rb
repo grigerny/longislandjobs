@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :loops, :dependent => :destroy
+  has_many :comments
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

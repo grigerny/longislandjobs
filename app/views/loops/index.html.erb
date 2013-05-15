@@ -8,6 +8,9 @@
 				<% end %>
 				</div>
 			</legend>
+			<% if current_user.loops.count == 0 %>
+			You have not added anyone to your loop yet, click <%= link_to "Add Contact", new_loop_path %> to begin. 
+			<% else %>
 				<% @loops.each do |loop| %>
 				<div id="loop-time-ago">
 		        Met <%= time_ago_in_words(loop.date) rescue nil %> ago
@@ -19,7 +22,9 @@
 					<%= loop.title %>
 					</div>
 					<hr>
-						<% end %>
+					<% end %>
+					<% end %>
+				
 	</div>
 		
 		<div class="span3">

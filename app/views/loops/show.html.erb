@@ -19,10 +19,37 @@
 	
 			<div class="row-fluid">
 				<div class="span12">
-					<h5>Notes:</h5>
+					<h5> First Impression:</h5>
 					<%= simple_format (@loop.comment) %>
 				</div>
 			</div>
+			
+			<div class="row-fluid">
+				<div class="span12">
+					<div id="comment-section">
+						<div id="comment-section-heading">	
+						
+							<% @loop.comments.reverse.each do |comment| %>
+							<div id="comment-section-body">
+							<%= comment.body %>
+							<div id="comment-section-created_at">
+							added <%= time_ago_in_words(comment.created_at) %>
+							</div>	
+							</div>
+							<% end %>
+							</div>
+					</div>	
+				</div>
+			</div>
+			<br>
+			
+				<%= form_for ([@loop, @loop.comments.build]) do |f| %>
+				  <div class="field">
+				<%= f.text_area :body, :placeholder => "New note about #{@loop.firstname}", :rows => 5, :style => "width:100%;" %></br>
+				  </div>
+				<%= f.submit 'Add Comment', :class => "btn" %>
+				<% end %>
+			
 			
 		</div>
 			<div class="span3">

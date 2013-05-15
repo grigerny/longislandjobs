@@ -2,7 +2,9 @@ Longislandjoblink::Application.routes.draw do
   
   devise_for :users
 
-  resources :loops
+  resources :loops do 
+    resources :comments 
+  end
 
   get "home/index"
     
