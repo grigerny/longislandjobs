@@ -13,17 +13,72 @@
 			<div class="row-fluid">
 				<div class="span12">
 					<div id="jobs-index-body">	
-						<div id="jobs-index-body-heading">
-						</div>	
-						<h4>Job Search</h4>
-						<p>All Job posts are verified; no more get-rich-quick schemes.</p>
-						<div class="coming-soon">
-						<%= "Coming soon".upcase %>
-						</div>
-						<h4>Find Local Networking Events</h4> 
-						<p>Find opportunities to network and gain business connections.</p>
-						<h4>Hire Trusted Professionals</h4>
-						<p>Work with people who are known to be the best at what they do.</p>
+								
+							
+							<div class="span3">
+							<div class="index-heading-wrapper1">		
+								<div id="index-heading-div">
+								Job Listings
+								</div>
+							</div>
+							</div>
+							
+								<script>
+								$(".index-heading-wrapper1").hover(function(){
+								    $('#index-wrapper1').removeClass('hidden');
+									},function(){
+									    $('#index-wrapper1').addClass('hidden');
+									});
+								</script>
+							
+							<div class="span3">
+								<div class="index-heading-wrapper2">	
+								<div id="index-heading-div">
+								Events
+								</div>
+								</div>
+							</div>
+							
+								<script>
+								$(".index-heading-wrapper2").hover(function(){
+								     $('#index-wrapper2').removeClass('hidden');
+										},function(){
+										    $('#index-wrapper2').addClass('hidden');
+								});
+								</script>
+							
+							<div class="span3">
+								<div class="index-heading-wrapper3">	
+								<div id="index-heading-div">
+								Professionals
+								</div>
+								</div>
+							</div>
+							
+								<script>
+								$(".index-heading-wrapper3").hover(function(){
+								     $('#index-wrapper3').removeClass('hidden');
+										},function(){
+										    $('#index-wrapper3').addClass('hidden');
+								});
+								</script>
+							
+							<div class="span3">
+								<div class="index-heading-wrapper4">	
+								<div id="index-heading-div">
+								My Loop
+								</div>
+								</div>
+							</div>
+							
+							
+								<script>
+								$(".index-heading-wrapper4").hover(function(){
+								     $('#index-wrapper4').removeClass('hidden');
+										},function(){
+										    $('#index-wrapper4').addClass('hidden');
+								});
+								</script>
 					
 					</div>
 				</div>
@@ -42,13 +97,76 @@
 	</div>
 	</div>
 	
-		<div class="premium-service">
-		<%= "Premium Subscription only $1/month".upcase %> 
-		</div>	
-		<h4>My Loop: Online Networking Relationship Management</h4>
-		<p> Take notes, track conversations and build your network. </p>
+		<div class="row-fluid">
+			<div class="span9">
+				
+				
+					<div id="index-wrapper1" div class="hidden">
+					
+						<div id="index-subsection-heading1">
+						<li>All job posts are verified</li>
+						<br>
+						<li>Share jobs with anyone</li>
+						<br>
+						<li>Always free</li>
+						</div>
+					
+					</div>
+					
+						<div id="index-wrapper2" div class="hidden">
+
+							<div id="index-subsection-heading1">
+							<li>Post and find local networking events</li>
+							<br>
+							<li>Share events with anyone</li>
+							<br>
+							<li>Always free</li>
+							<br>
+							</div>
+							
+						</div>	
+						
+							<div id="index-wrapper3" div class="hidden">
+
+								<div id="index-subsection-heading1">
+								<li>Build a networking profile</li>
+								<br>
+								<li>Rate local professionals</li>
+								<br>
+								<li>Increase business opportunity</li>
+								<br>
+								</div>
+
+							</div>
+							
+								<div id="index-wrapper4" div class="hidden">
+									
+
+									<div id="index-subsection-heading1">
+											<div class="premium-service">
+											<%= "Premium Subscription: Only $19 per year".upcase %> 
+											</div>	
+									<li>Online networking management tool</li>
+									<br>
+									<li>Add notes on who you meet</li>
+									<br>
+									<li>Track business activity</li>
+									<br>
+								
+									
+									</div>
+
+								</div>
+							
+						
+					
+					
+			</div>
+		</div>
+		
 	</div>
 </div>	
+
 
 <div class='bottom-menu'>
 </div>
