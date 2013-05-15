@@ -11,7 +11,6 @@ Longislandjoblink::Application.routes.draw do
   end
 
   resources :newsletters
-  resources :comments
 
 
   # The priority is based upon order of creation:

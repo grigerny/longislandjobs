@@ -1,7 +1,6 @@
 class Loop < ActiveRecord::Base
-  acts_as_commentable
   belongs_to :user
-  has_many :comments
+
   attr_accessible :firstname, :lastname, :title, :phone, :email, :website, :location, :comment, :date, :industry, :user_id
   
   validates_presence_of :firstname, :lastname, :location, :date
