@@ -13,7 +13,7 @@
 			<% else %>
 				<% @loops.each do |loop| %>
 				<div id="loop-time-ago">
-		        Met <%= time_ago_in_words(loop.date) rescue nil %> ago
+		        met <%= time_ago_in_words(loop.date) rescue nil %> ago
 				</div>
 					<div id="loop-name">
 					<%= link_to loop.firstname + " " + loop.lastname, loop %>

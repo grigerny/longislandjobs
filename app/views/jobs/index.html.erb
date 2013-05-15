@@ -3,7 +3,7 @@
 	<div class="row-fluid">
 		<div class="span9">
 			<div id="new-jobs-heading">
-				<legend>Jobs 
+				<legend>Jobs in <%= @location.city %> 
 					<%= link_to "Post Job", new_location_job_path, :class => "post-jobs" %>
 				</legend>
 				
@@ -17,7 +17,7 @@
 				
 				<div class="row-fluid">
 					<div class="span12">
-						<% @jobs.find( :all, :order => "created_at DESC").each do |job| %>
+						<% @location.jobs.find( :all, :order => "created_at DESC").each do |job| %>
 					 		<div id="job-title">
 								<h4><%= link_to "#{job.title}", location_job_path(@location, job)%><h4>
 							</div>

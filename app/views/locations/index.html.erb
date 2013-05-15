@@ -1,21 +1,19 @@
-<h1>Listing locations</h1>
+<%= render '/home/index' %>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="container">
+	
+	<div class="row-fluid">
+		<div class="span9">
+			<div id="location-index">
+				<legend>Choose a location
+				</legend>
+				
+			</div>
+		</div>	
+	</div>		
 
 <% @locations.each do |location| %>
-  <tr>
-    <td><%= link_to 'Show', location %></td>
-    <td><%= link_to 'Edit', edit_location_path(location) %></td>
-    <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<%= link_to "#{location.city}", location_jobs_path(location) %><br>
 <% end %>
-</table>
 
-<br />
-
-<%= link_to 'New Location', new_location_path %>
+</div>
