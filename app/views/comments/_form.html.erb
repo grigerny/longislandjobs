@@ -1,0 +1,6 @@
+<%= form_for ([@provider, @loop.comments.build]) do |f| %>
+  <div class="field">
+<%= f.text_area :body, :placeholder => "Add a comment...", :rows => 5, :style => "width:700px;" %></br>
+  </div>
+<%= f.submit 'Add Comment' %>
+<% end %>
