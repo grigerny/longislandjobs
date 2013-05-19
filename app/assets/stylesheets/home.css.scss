@@ -3,6 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+#first-bar{
+	background-color:white;
+	height:60px;
+	border-bottom:2px solid white
+}
+
+#second-bar{
+	background:lightgray;
+	height:40px;
+	border:1px solid darkgray;
+}
+
 .premium-service{
 	color:#D18470;
 	font-weight:bold;
@@ -24,11 +36,28 @@
 	bottom:0px;
 }
 
-#top-menu{
-	background-color:#F1F1F1;
-	height:60px;
-	margin-bottom:20px;
-	border-bottom:1px solid #E5E5E5;
+#intro-network{
+	display:inline;
+	background-color:#0088CC;
+	color:white;
+	border-radius:5px;
+	padding:5px;
+}
+
+#intro-relationships{
+	display:inline;
+	background-color:#0088CC;
+	color:white;
+	border-radius:5px;
+	padding:5px;
+}
+
+.index-introduction-wrapper{
+	margin-top:60px;
+}
+
+.index-introduction{
+	font-size:26px;
 }
 
 .icon-user{
@@ -37,9 +66,8 @@
 }
 
 #user-login{
-	float:right;
-	margin-right:20px;
 	font-size:20px;
+	margin:5px;
 }
 
 .logout-link{
@@ -47,10 +75,21 @@
 }
 
 #logo{
-	left:20px;
-	position:absolute;
-	margin:20px;
+	color:black;
+	margin:15px;
 	font-size:20px;
+	padding:5px;
+	border-radius:5px;
+	text-align:center;
+}
+
+.logo-link-css{
+	color:black;
+}
+
+.logo-class:hover{
+	color:white;
+	text-decoration:none	
 }
 
 a.logo-link-css{
@@ -65,19 +104,14 @@ a.logo-link-css{
 }
 
 
-#whatsnew-heading{
-}
 
 #menu1{
-	min-width:200px;
-	left:280px;
-	position:absolute;
-	margin:20px;
+	margin:10px;
 	font-size:20px;
 }
 
 .menu1-link{
-	color:#333333;
+	color:#0088CC;
 }
 
 .menu1-link:hover{
@@ -85,59 +119,70 @@ a.logo-link-css{
 	text-decoration:none;
 }
 
+.menu1-wrapper{
+	margin-top:20px;
+	height:40px;
+	border-radius:5px;
+}
+
+.menu1-wrapper:hover{
+	height:40px;
+	color:#E2E2E1;
+}
+
 #menu2{
-	min-width:200px;
-	left:360px;
-	position:absolute;
-	margin:20px;
-	color:#333333;
+	margin:10px;
+	color:#0088CC;
 	font-size:20px;
+}
+
+.menu2-wrapper{
+	height:40px;
+	margin-top:20px;
+}
+
+.menu2-wrapper:hover{
+	height:40px;
 }
 
 #menu3{
-	min-width:200px;
-	left:460px;
-	position:absolute;
-	margin:20px;
-	color:#333333;
+	margin:10px;
+	color:#0088CC;
 	font-size:20px;
+}
+
+.menu3-wrapper{
+	height:40px;
+	margin-top:20px;
+}
+
+.menu3-wrapper:hover{
+	height:40px;
 }
 
 #menu4{
-	min-width:200px;
-	left:620px;
-	position:absolute;
-	margin:20px;
-	color:#333333;	
+	margin:10px;
+	color:#0088CC;	
 	font-size:20px;
 }
 
-.menu4{
-	color:#333333;	
+.menu4-link{
+	color:#0088CC;
 }
 
-.menu4:hover{
-	color:#D18470;
+.menu4-link:hover{
+	color:#0088CC;
 	text-decoration:none;
 }
 
-#menu4-premium{
-	width:50px;
-	position:relative;
-	left:650px;
-	top:5px;
-	color:#D18470;
-	font-weight:bold;
-	font-size:10px;
+.menu4-wrapper{
+	height:40px;
+	margin-top:20px;
 }
 
-#menu5{
-	min-width:200px;
-	left:770px;
-	position:absolute;
-	margin:20px;	
+.menu4-wrapper:hover{
+	height:40px;
 }
-
 .signin-wrapper{
 	background-color:#ECF7FE;
 	padding:20px;
@@ -169,106 +214,4 @@ a.logo-link-css{
 	border:1px solid #176DA7;
 }
 
-#index-wrapper1{
-	margin-top:20px;
-	height:140px;
-	background:#F1F1F1;
-	}
-	.hidden{
-	display:none;
-}
 
-#index-wrapper2{
-	margin-top:20px;
-	height:140px;
-	background:#F1F1F1;
-	}
-	.hidden{
-	display:none;
-}
-
-
-#index-wrapper3{
-	margin-top:20px;
-	height:140px;
-	background:#F1F1F1;
-	}
-	.hidden{
-	display:none;
-}
-
-#index-wrapper4{
-	margin-top:20px;
-	height:140px;
-	background:#F1F1F1;
-	}
-	.hidden{
-	display:none;
-}
-
-.index-heading-wrapper1{
-	background-color:#F1F1F1;
-	padding:20px;
-	height:100px;
-}
-
-.index-heading-wrapper1:hover{
-	background-color:#0088CC;
-	padding:20px;
-	height:100px;
-	color:#F1F1F1;
-}
-
-.index-heading-wrapper2{
-	background-color:#F1F1F1;
-	padding:20px;
-	height:100px;
-}
-
-.index-heading-wrapper2:hover{
-	background-color:#0088CC;
-	padding:20px;
-	height:100px;
-	color:#F1F1F1;
-}
-
-.index-heading-wrapper3{
-	background-color:#F1F1F1;
-	padding:20px;
-	height:100px;
-}
-
-.index-heading-wrapper3:hover{
-	background-color:#0088CC;
-	padding:20px;
-	height:100px;
-	color:#F1F1F1;
-}
-
-.index-heading-wrapper4{
-	background-color:#F1F1F1;
-	padding:20px;
-	height:100px;
-}
-
-.index-heading-wrapper4:hover{
-	background-color:#D18388;
-	padding:20px;
-	height:100px;
-	color:#F1F1F1;
-}
-
-#index-heading-div{
-	font-size:16px;
-}
-
-#index-subsection-heading1{
-	font-size:16px;
-	padding:20px;
-}
-
-#index-paragraph-div{
-	color:#6D6D6D;
-	font-size:13px;
-	margin-bottom:10px;
-}

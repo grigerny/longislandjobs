@@ -1,28 +1,16 @@
 // Place all the styles related to the Loops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#loop-name{
+
+.loop-title{
 	color:#0088CC;
-	font-size:16px;
-	font-weight:bold;
+	font-size:13px;
 }
 
-#loop-title{
-	color:#CD816E;
-}
 #loop-time-ago{
 	color:#666666;
-	float:right;
 }
 
-#add-contact-to-loop{
-	float:right;
-	color:#D18470;
-}
-
-.add-contact-to-loop{
-	color:#D18470;
-}
 .loop-field{
 	width:100%;
 }
@@ -31,4 +19,114 @@
 	position:relative;
 	display:inline;
 	top:-5px;
+}
+
+
+.add-contact-to-loop{
+	margin-left:15px;
+}
+
+#loop-dashboard-addcontact{
+	padding:5px;
+	float:left;
+}
+
+#loop-dashboard-editcontact{
+	padding:5px;
+	float:left;
+}
+
+.loop-name-css{
+	font-size:20px;
+	color:white;
+}
+
+.loop-name-css:hover{
+	text-decoration:none;
+}
+
+.contact-list{
+	margin-top:20px;
+	background:#F1F1F1;
+	border:1px solid lightgray;
+	padding:10px;
+	color:white;
+	border-radius:5px;
+	height:auto;
+}
+
+.loop-name-css{
+	font-size:16px;
+	color:black;
+}
+
+.loop-name-css:hover{
+	text-decoration:none;
+}
+
+#loop-index-edit{
+	float:right;
+}
+
+.dashboard-index-logo{
+	padding:10px;
+	float:left;
+}
+
+.dashboard-show-logo{
+	padding:10px;
+	float:left;
+}
+
+#whatsnew-heading{
+	margin-top:20px;
+	background:#0088CC;
+	border-radius:5px;
+	height:100px;
+	border:1px solid lightgray;
+	color:white;
+}
+
+.how-we-met-wrapper{
+	font-size:16px;
+	padding:10px;
+	color:#B6B6B6;
+	margin-top:40px;
+	margin-bottom:40px;
+}
+
+#how-we-met-firstname{
+	padding:1px;
+	color:#444444;
+	display:inline;
+	margin:5px;
+}
+
+#how-we-met-location{
+	padding:2px;
+	color:#444444;
+	display:inline;
+	margin:5px;
+}
+
+#how-we-met-date{
+	padding:2px;
+	color:#444444;
+	display:inline;
+	margin:5px;
+}
+
+.first-impression{
+	color:#444444;
+	font-size:16px;
+	line-height:24px;
+}
+
+.show-wrapper{
+	background:#FAFAFA;
+	height:100%;
+	border:0px solid #0088CC;
+	-moz-box-shadow: inset 0 0 5px #888;
+	-webkit-box-shadow: inset 0 0 5px#888;
+	box-shadow: inner 0 0 5px #888;
 }

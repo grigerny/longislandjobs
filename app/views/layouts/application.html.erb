@@ -19,50 +19,62 @@
 	<% if flash[:notice] %>
 	<p id="notice"><%= notice %></p>
 	 <% end %>
-				
+						
 	<div class="row-fluid">
-			<div id="top-menu">					
-					<div id="logo">
-						<%= link_to "NetworkingLoop", home_index_path %>
-					</div>	
+		<div class="span12">
+			<div id="first-bar">
 				
-					<div id="menu1">
-						<%= link_to locations_path, :class => "menu1-link" do %>
-							<%= "Jobs" %>
-							<% end %>
-					</div>	
+					<div class="span3">
+						<div id="logo">
+							<%= link_to home_index_path, :class => "logo-link-css" do %>
+								<%= "Networking loop" %>
+								<% end %>
+						</div>
+					</div>		
 					
-					<div id="menu2">
-						Events
-					</div>
-					
-					<div id="menu3">
-						Professionals
-					</div>
-					
-					<div id="menu4">
-						<%= link_to loops_path, :class => "menu4" do %> 
-							<%= "My Loop" %>
-						<% end %>
-					</div>
-					<div id="menu4-premium">PREMIUM</div>
-					
-			
-						<% if user_signed_in? %>
-						<div id="user-login">
-						 	<%= link_to destroy_user_session_path, method: :delete, :class => "logout-link"  do  %>
-							<%= "Logout" %>
-						</div>	
-						<% end %>
-						<% end %>
-					
-				
-			</div>		
-	</div>
+						<div class="span2">
+							<div class="menu1-wrapper">
+								<div id="menu1">
+								<%= link_to locations_path, :class => "menu1-link" do %>
+								<%= "job board" %>
+								<% end %>
+								</div>	
+							</div>	
+						</div>
 
-<%= yield %>
+						<div class="span2">
+							<div class="menu2-wrapper">
+							<div id="menu2">
+								events
+							</div>
+							</div>
+						</div>
 
+						<div class="span2">
+							<div class="menu3-wrapper">
+							<div id="menu3">
+							business
+							</div>
+							</div>
+						</div>
 
+						<div class="span2">
+							<div class="menu4-wrapper">
+							<div id="menu4">
+								<%= link_to loops_path, :class => "menu4-link" do %> 
+									<%= "dashboard" %>
+									<% end %>
+							</div>
+					
+							</div>
+						</div>
+						
+			</div>	
+		</div>	
+	</div>		
+
+	
+	<%= yield %>
 
 </body>
 

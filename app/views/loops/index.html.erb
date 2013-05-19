@@ -1,35 +1,51 @@
+<%= render 'dashbarindex' %>
+
 <div class="container">
 	<div class="row-fluid">
+		
 		<div class="span9">
-			<legend>My Loop
-				<div id="add-contact-to-loop">
-				<%= link_to new_loop_path, :class => "add-contact-to-loop" do %>
-				<%= "Add Contact" %>
-				<% end %>
-				</div>
-			</legend>
+			<div class="contact-list">
 			<% if current_user.loops.count == 0 %>
 			You have not added anyone to your loop yet, click <%= link_to "Add Contact", new_loop_path %> to begin. 
 			<% else %>
-				<% @loops.each do |loop| %>
-				<div id="loop-time-ago">
-		        met <%= time_ago_in_words(loop.date) rescue nil %> ago
-				</div>
-					<div id="loop-name">
-					<%= link_to loop.firstname + " " + loop.lastname, loop %>
+					<% @loops.each do |loop| %>
+					
+					<div class="row-fluid">
+						
+					<div class="span8">
+						<div id="loop-name">
+						<%= link_to loop, :class => "loop-name-css" do %>
+							<%= loop.firstname + " " + loop.lastname %>
+							<% end %>
+						</div>
+						<div class="loop-title">
+						<%= loop.title %>
+						</div>
 					</div>
-					<div id="loop-title">
-					<%= loop.title %>
+					
+					<div class="span3">
+							<div id="loop-time-ago">
+					        met <%= time_ago_in_words(loop.date) %> ago
+							</div>
+						</div>	
+
+					<div class="span1">
+							<div id="loop-index-edit">
+							<%= link_to edit_loop_path(loop), :class => "btn" do %>
+							<%= 'Edit' %>
+							<% end %>
+							</div>	
 					</div>
-					<hr>
-					<% end %>
-					<% end %>
 				
-	</div>
+					</div>
+							<hr>
+					<% end %>
+					<% end %>
+			</div>	
+		</div>			
 		
 		<div class="span3">
 			<div id="whatsnew-heading">
-				<legend>Stats</legend>
 				<% if current_user.loops.count == 0 %>
 				<p>You have <%= current_user.loops.count %> networking contacts. Click on <%= link_to "Add Contact", new_loop_path %> to start building up your networking contacts.</p>
 				<% else %>
@@ -37,5 +53,7 @@
 				<% end %>
 			</div>	
 		</div>
-	</div>	
-</div>
+		
+		
+	</div> 
+</div>	

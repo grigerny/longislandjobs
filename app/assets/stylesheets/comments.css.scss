@@ -2,16 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #comment-section-body{
-	margin-left:20px;
-	background-color:#F1F1F1;
-	margin-bottom:5px;
+	margin-bottom:10px;
 	padding:20px;
-	color:#333333;
+	color:black;
 	font-size:12px;
-	-moz-box-shadow: 0 0 1px #888;
-	-webkit-box-shadow: 0 0 1px#888;
-	box-shadow: 0 0 1px #888;
-	border-radius:5px;
+	border-radius:10px;
+	border:1px solid #888;
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 4px #888;
+	background: #a9d1fe; /* Old browsers */
+	background: -moz-linear-gradient(top,  #a9d1fe 1%, #84befe 50%, #a9d1fe 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#a9d1fe), color-stop(50%,#84befe), color-stop(100%,#a9d1fe)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #a9d1fe 1%,#84befe 50%,#a9d1fe 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #a9d1fe 1%,#84befe 50%,#a9d1fe 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #a9d1fe 1%,#84befe 50%,#a9d1fe 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #a9d1fe 1%,#84befe 50%,#a9d1fe 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9d1fe', endColorstr='#a9d1fe',GradientType=0 ); /* IE6-9 */
 }
 
 #comment-section-created_at{
