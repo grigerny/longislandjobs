@@ -4,15 +4,13 @@
 
 
 #first-bar{
-	background-color:white;
+	background-color:black;
 	height:60px;
-	border-bottom:2px solid white
 }
 
 #second-bar{
-	background:lightgray;
+	background:rgba(0, 136, 204, 1.000);
 	height:40px;
-	border:1px solid darkgray;
 }
 
 .premium-service{
@@ -75,7 +73,7 @@
 }
 
 #logo{
-	color:black;
+	color:white;
 	margin:15px;
 	font-size:20px;
 	padding:5px;
@@ -84,7 +82,7 @@
 }
 
 .logo-link-css{
-	color:black;
+	color:white;
 }
 
 .logo-class:hover{
@@ -93,7 +91,7 @@
 }
 
 a.logo-link-css{
-	color:#444;
+	color:white;
 	text-decoration:none;
 }
 

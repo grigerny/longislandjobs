@@ -88,11 +88,14 @@
 }
 
 .how-we-met-wrapper{
+	padding:20px;
 	font-size:16px;
-	padding:10px;
+	margin-top:10px;
 	color:#B6B6B6;
-	margin-top:40px;
-	margin-bottom:40px;
+	margin-bottom:20px;
+	font-weight:200;
+	font-family: 'Roboto', sans-serif;
+	line-height:20px;
 }
 
 #how-we-met-firstname{
@@ -106,14 +109,13 @@
 	padding:2px;
 	color:#444444;
 	display:inline;
-	margin:5px;
+	margin-bottom:5px;
 }
 
 #how-we-met-date{
 	padding:2px;
 	color:#444444;
 	display:inline;
-	margin:5px;
 }
 
 .first-impression{
@@ -123,10 +125,43 @@
 }
 
 .show-wrapper{
-	background:#FAFAFA;
-	height:100%;
-	border:0px solid #0088CC;
-	-moz-box-shadow: inset 0 0 5px #888;
-	-webkit-box-shadow: inset 0 0 5px#888;
-	box-shadow: inner 0 0 5px #888;
+	padding:20px;
+	background:white;
+}
+
+.title{
+	color:rgba(100, 100, 100, 1.000);
+	font-size:24px;
+	font-weight:200;
+	font-family: 'Roboto', sans-serif;
+}
+
+.heading-notes{
+	color:rgba(100, 100, 100, 1.000);
+	font-size:24px;
+	font-weight:200;
+	font-family: 'Roboto', sans-serif;
+	margin-bottom:20px;
+}
+
+#contact-heading{
+	color:rgba(100, 100, 100, 1.000);
+	font-size:24px;
+	font-weight:200;
+	font-family: 'Roboto', sans-serif;
+	margin-bottom:20px;
+}
+
+#contact-field-css{
+	font-size:16px;
+	color:#B6B6B6;
+	font-weight:200;
+	font-family: 'Roboto', sans-serif;
+}
+
+#contact-answer-css{
+	font-size:16px;
+	color:rgba(100, 100, 100, 1.000);
+	font-weight:200;
+	font-family: 'Roboto', sans-serif;
 }
