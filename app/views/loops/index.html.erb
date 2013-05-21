@@ -3,7 +3,11 @@
 <div class="container">
 	<div class="row-fluid">
 		
-		<div class="span9">
+			<div class="span9">
+					<div id="contact-list-heading">
+						My Contacts
+					</div>
+					
 			<div class="contact-list">
 			<% if current_user.loops.count == 0 %>
 			You have not added anyone to your loop yet, click <%= link_to "Add Contact", new_loop_path %> to begin. 

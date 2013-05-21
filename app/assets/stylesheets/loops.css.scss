@@ -9,7 +9,7 @@
 
 #loop-time-ago{
 	display:inline;
-	color:#666666;
+	color:RGBA(182.00, 182.00, 188.00, 1.00);
 	font-size:14px;
 
 }
@@ -61,7 +61,6 @@
 
 .contact-list{
 	margin-top:20px;
-	padding:10px;
 	color:white;
 	border-radius:5px;
 	height:auto;
@@ -160,6 +159,14 @@
 	font-weight:200;
 	font-family: 'Roboto', sans-serif;
 	margin-bottom:20px;
+}
+
+#contact-list-heading{
+	margin-top:20px;
+	color:RGBA(185.00, 182.00, 182.00, 1.00);
+	font-size:24px;
+	font-weight:200;
+	font-family: 'Roboto', sans-serif;
 }
 
 #contact-heading{
