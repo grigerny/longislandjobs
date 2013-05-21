@@ -9,9 +9,13 @@
 }
 
 #second-bar{
-	background:rgba(0, 136, 204, 1.000);
+	background: RGBA(51.00, 139.00, 201.00, 1.00);
 	height:40px;
+	-moz-box-shadow: 0 4px 2px -2px gray;
+	-webkit-box-shadow: 0 4px 2px -2px gray;
+	box-shadow: 0 4px 2px -2px gray;
 }
+
 
 .premium-service{
 	color:#D18470;
@@ -109,7 +113,8 @@ a.logo-link-css{
 }
 
 .menu1-link{
-	color:#0088CC;
+	color:RGBA(255.00, 255.00, 255.00, 1.00);
+	border-bottom:1px solid RGBA(51.00, 139.00, 201.00, 1.00);
 }
 
 .menu1-link:hover{
@@ -130,8 +135,9 @@ a.logo-link-css{
 
 #menu2{
 	margin:10px;
-	color:#0088CC;
+	color:RGBA(255.00, 255.00, 255.00, 1.00);
 	font-size:20px;
+	border-bottom:1px solid RGBA(51.00, 139.00, 201.00, 1.00);
 }
 
 .menu2-wrapper{
@@ -145,8 +151,9 @@ a.logo-link-css{
 
 #menu3{
 	margin:10px;
-	color:#0088CC;
+	color:RGBA(255.00, 255.00, 255.00, 1.00);
 	font-size:20px;
+	border-bottom:1px solid RGBA(51.00, 139.00, 201.00, 1.00);
 }
 
 .menu3-wrapper{
@@ -160,12 +167,13 @@ a.logo-link-css{
 
 #menu4{
 	margin:10px;
-	color:#0088CC;	
+	color:RGBA(255.00, 255.00, 255.00, 1.00);	
 	font-size:20px;
 }
 
 .menu4-link{
-	color:#0088CC;
+	color:RGBA(255.00, 255.00, 255.00, 1.00);
+	border-bottom:1px solid RGBA(51.00, 139.00, 201.00, 1.00);
 }
 
 .menu4-link:hover{

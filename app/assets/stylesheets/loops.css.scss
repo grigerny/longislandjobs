@@ -36,6 +36,17 @@
 	float:left;
 }
 
+#loop-dashboard-deletecontact{
+	padding:5px;
+	float:left;
+}
+
+#loop-dashboard-back{
+	padding:5px;
+	float:left;
+}
+
+
 .loop-name-css{
 	font-size:20px;
 	color:white;
@@ -88,7 +99,6 @@
 }
 
 .how-we-met-wrapper{
-	padding:20px;
 	font-size:16px;
 	margin-top:10px;
 	color:#B6B6B6;
@@ -137,7 +147,7 @@
 }
 
 .heading-notes{
-	color:rgba(100, 100, 100, 1.000);
+	color:RGBA(185.00, 182.00, 182.00, 1.00);
 	font-size:24px;
 	font-weight:200;
 	font-family: 'Roboto', sans-serif;
@@ -164,4 +174,9 @@
 	color:rgba(100, 100, 100, 1.000);
 	font-weight:200;
 	font-family: 'Roboto', sans-serif;
+}
+
+#met-date{
+	color:RGBA(182.00, 182.00, 188.00, 1.00);
+	display:inline;
 }

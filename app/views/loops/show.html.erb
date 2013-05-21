@@ -5,11 +5,10 @@
 				<div class="row-fluid">
 					<div class="span9">
 						<div class="title">
-							<%= @loop.firstname %> <%= @loop.lastname %>
+							<%= @loop.firstname %> <%= @loop.lastname %> <div id="met-date"> | <%= @loop.date.strftime('%b %d, %Y') %> </div>
 							</div>
 						<div class="how-we-met-wrapper">
-					 		From <div id="how-we-met-location"><%= @loop.location %></div><br>
-							On <div id="how-we-met-date"><%= @loop.date.strftime('%a %m %Y') %></div>
+					 		<div id="how-we-met-location"><%= @loop.location %></div><br>
 						</div>
 					</div>
 				
