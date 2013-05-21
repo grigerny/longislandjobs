@@ -3,7 +3,7 @@
 <div class="container">
 	<div class="row-fluid">
 		
-			<div class="span9">
+			<div class="span7">
 					<div id="contact-list-heading">
 						My Contacts
 					</div>
@@ -54,14 +54,12 @@
 			</div>	
 		</div>			
 		
-		<div class="span3">
-			<div id="whatsnew-heading">
-				<% if current_user.loops.count == 0 %>
-				<p>You have <%= current_user.loops.count %> networking contacts. Click on <%= link_to "Add Contact", new_loop_path %> to start building up your networking contacts.</p>
-				<% else %>
-				<p> You have <%= pluralize("#{current_user.loops.count}", "networking contact") %>. </p>
-				<% end %>
+		<div class="span5">
+			<div class="whatsnew-heading">
+				Dashboard
 			</div>	
+			<div class="whatsnew-part1">
+			</div>
 		</div>
 		
 		
