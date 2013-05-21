@@ -12,30 +12,36 @@
 					
 					<div class="row-fluid">
 						
-					<div class="span8">
+					<div class="span10">
 						<div id="loop-name">
 						<%= link_to loop, :class => "loop-name-css" do %>
 							<%= loop.firstname + " " + loop.lastname %>
-							<% end %>
+							<% end %> 
+								<div id="loop-time-ago">
+						        | <%= time_ago_in_words(loop.date) %> ago
+								</div>
 						</div>
 						<div class="loop-title">
 						<%= loop.title %>
 						</div>
 					</div>
-					
-					<div class="span3">
-							<div id="loop-time-ago">
-					        met <%= time_ago_in_words(loop.date) %> ago
-							</div>
-						</div>	
+			
 
 					<div class="span1">
 							<div id="loop-index-edit">
 							<%= link_to edit_loop_path(loop), :class => "btn" do %>
 							<%= 'Edit' %>
 							<% end %>
-							</div>	
+							</div>			
 					</div>
+					
+					<div class="span1">
+							<div id="loop-index-delete">
+							<%= link_to loop_path(loop), :method => :delete, :confirm => "Are you sure?", :class => "btn" do %>
+							<%= 'Delete' %>
+							<% end %>
+							</div>
+					</div>		
 				
 					</div>
 							<hr>

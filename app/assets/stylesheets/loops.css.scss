@@ -8,7 +8,10 @@
 }
 
 #loop-time-ago{
+	display:inline;
 	color:#666666;
+	font-size:14px;
+
 }
 
 .loop-field{
@@ -58,12 +61,12 @@
 
 .contact-list{
 	margin-top:20px;
-	background:#F1F1F1;
-	border:1px solid lightgray;
 	padding:10px;
 	color:white;
 	border-radius:5px;
 	height:auto;
+	font-weight:200;
+	font-family: 'Roboto', sans-serif;
 }
 
 .loop-name-css{
@@ -76,6 +79,11 @@
 }
 
 #loop-index-edit{
+	margin-right:5px;
+	float:right;
+}
+
+#loop-index-delete{
 	float:right;
 }
 
