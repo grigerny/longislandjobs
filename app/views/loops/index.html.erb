@@ -22,7 +22,7 @@
 							<%= loop.firstname + " " + loop.lastname %>
 							<% end %> 
 								<div id="loop-time-ago">
-						        | <%= time_ago_in_words(loop.date) %> ago
+						        | <%= loop.date.strftime('%b %d, %Y')%> 
 								</div>
 						</div>
 						<div class="loop-title">
