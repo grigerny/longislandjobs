@@ -75,24 +75,27 @@
 											<div id="comment-section-body">
 											<%= comment.body %>
 											<div id="comment-section-created_at">
-												<%= comment.created_at.strftime('%b %d, %Y')%>
+												<%= comment.created_at.strftime('%l:%M %p %b %d, %Y ')%>
 													
 											</div>	
 											</div>
-											<hr>
+										
 										<% end %>
 								
 										</div>
 									</div>	
 								</div>
 						
-
-								<%= form_for ([@loop, @loop.comments.build]) do |f| %>
+							
+								<%= form_for ([@loop, @loop.comments.build]), :class => "loop-show-comment-form" do |f| %>
+							
 					  			<div class="field">
-					<%= f.text_area :body, :placeholder => "New note about #{@loop.firstname}", :rows => 5, :style => "width:100%;" %></br>
-					  </div>
+								<%= f.text_area :body, :class => "loop-show-comment-form", :placeholder => "New note about #{@loop.firstname}", :rows => 5, :style => "width:100%;" %></br>
+								</div>
+					  		
 								<%= f.submit 'Add note', :class => "btn" %>
 								<% end %>
+								
 					</div>		
 														
 					
