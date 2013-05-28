@@ -8,6 +8,14 @@
 						My Contacts
 					</div>
 					
+						<form class="search">
+						<%= search_form_for @search do |f| %>
+						<%= f.text_field :firstname_cont %>
+						</form>
+					
+						<div class="actions">
+						<%= f.submit %>
+						</div>
 					
 						
 						
@@ -19,57 +27,59 @@
 					
 					<div class="row-fluid">
 						
-					<div class="span10">
-						<div id="loop-name">
-						<%= link_to loop, :class => "loop-name-css" do %>
+						<div class="span10">
+							<div id="loop-name">
+							<%= link_to loop, :class => "loop-name-css" do %>
 							<%= loop.firstname + " " + loop.lastname %>
 							<% end %> 
 								<div id="loop-time-ago">
-						        | <%= loop.date.strftime('%b %d, %Y')%> 
+						        | <%= loop.date.strftime('%b %d, %Y') %> 
 								</div>
-						</div>
-						<div class="loop-title">
-						<%= loop.title %>
-						</div>
-					</div>
-			
-
-					<div class="span1">
-							<div id="loop-index-edit">
-							<%= link_to edit_loop_path(loop), :class => "btn" do %>
-							<%= 'Edit' %>
-							<% end %>
-							</div>			
-					</div>
+							</div>
+							<div class="loop-title">
+								<%= loop.title %>
+							</div>
 					
-					<div class="span1">
+						</div>
+			
+						<div class="span1">
+							<div id="loop-index-edit">
+								<%= link_to edit_loop_path(loop), :class => "btn" do %>
+									<%= 'Edit' %>
+									<% end %>
+							</div>			
+						</div>
+					
+						<div class="span1">
 							<div id="loop-index-delete">
 							<%= link_to loop_path(loop), :method => :delete, :confirm => "Are you sure?", :class => "btn" do %>
 							<%= 'Delete' %>
 							<% end %>
 							</div>
-					</div>		
+						</div>		
 				
-					</div>
+						</div>
 							<hr>
 					<% end %>
 					<% end %>
-				
+					<% end %>
+					
+				    </div>
 					
 					
 				
 			</div>	
 			
-				<div id="friendship-loop">
+			<div id="friendship-loop">
 				<% current_user.friendships.each do |friendship| %>
 				<%= link_to friendship, :class => "loop-name-css" do %>
 				<%= friendship.friend.firstname %> <%= friendship.friend.lastname %>
 				<% end %>
 				<%= friendship.friend.title %>
-				</div>
 				<% end %>
+			</div>
 				
-		    </div>			
+		</div>
 		
 		<div class="span5">
 			<div class="whatsnew-heading">
