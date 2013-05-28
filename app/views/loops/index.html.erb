@@ -51,7 +51,19 @@
 							<hr>
 					<% end %>
 					<% end %>
+					
+				
 			</div>	
+			
+				<div id="friendship-loop">
+				<% current_user.friendships.each do |friendship| %>
+				<%= link_to friendship, :class => "loop-name-css" do %>
+				<%= friendship.friend.firstname %> <%= friendship.friend.lastname %>
+				<% end %>
+				<%= friendship.friend.title %>
+				</div>
+				<% end %>
+				
 		</div>			
 		
 		<div class="span5">
@@ -59,9 +71,7 @@
 				Loop Number: <%= current_user.token%>
 			</div>	
 			<div class="whatsnew-part1">
-				<% current_user.friendships.each do |friendship| %>
-				<%= friendship.friend %>
-				<% end %>
+				
 			</div>
 		</div>
 		

@@ -27,4 +27,17 @@ class FriendshipsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  
+  # GET /loops/1
+  # GET /loops/1.json
+  def show
+    @friendship = current_user.friendships.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @loop }
+    end
+  end
+  
 end

@@ -1,5 +1,64 @@
-<p id="notice"><%= notice %></p>
 
 
-<%= link_to 'Edit', edit_friendship_path(@friendship) %> |
-<%= link_to 'Back', friendships_path %>
+	<div class="container">
+	<div class="show-wrapper">	
+				<div class="row-fluid">
+					<div class="span9">
+						<div class="title">
+							<%= @friendship.friend.firstname %> <%= @friendship.friend.lastname %> <div id="met-date"> | </div>
+							</div>
+						<div class="how-we-met-wrapper">
+					 		
+						</div>
+					</div>
+				
+				
+				<div class="span3">
+					<div id="contact-heading">
+						Contact info
+					</div>
+
+					<div class="row-fluid">
+						<div class="span12">
+							<div id="contact-field-css">
+								Title
+								</div>
+							<div id="contact-answer-css">
+							<%= @friendship.friend.title %>
+							</div>
+							<br>
+							<div id="contact-field-css">
+								Industry
+								</div>
+							<div id="contact-answer-css">
+							<%= @friendship.friend.industry %>
+							</div>
+							<br>
+							<div id="contact-field-css">
+								Phone
+								</div>
+							<div id="contact-answer-css">
+							<%= @friendship.friend.phone %>
+							</div>
+							<br>
+							<div id="contact-field-css">
+							Email
+							</div>
+							<div id="contact-answer-css">
+							<%= mail_to "#{@friendship.friend.email}" %>
+							</div>
+							<br>
+							<div id="contact-field-css">
+								Website:
+								</div>
+							<div id="contact-answer-css"><%= link_to "#{@friendship.friend.website}", @friendship.friend.website %></div>
+						</div>
+					</div>
+		  		</div>
+			</div>	
+
+
+		
+		
+	</div>		
+</div>
