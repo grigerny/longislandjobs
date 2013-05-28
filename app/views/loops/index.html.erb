@@ -3,20 +3,11 @@
 <div class="container">
 	<div class="row-fluid">
 		
-			<div class="span7">
+		<div class="span7">
 					<div id="contact-list-heading">
 						My Contacts
 					</div>
 					
-					
-						<form class="search">
-						<%= search_form_for @search do |f| %>
-						<%= f.text_field :firstname_cont %>
-						</form>
-					
-						<div class="actions">
-						<%= f.submit %>
-						</div>
 					
 						
 						
@@ -63,7 +54,7 @@
 							<hr>
 					<% end %>
 					<% end %>
-					<% end %>
+				
 					
 					
 				
@@ -78,17 +69,15 @@
 				</div>
 				<% end %>
 				
-		</div>			
+		    </div>			
 		
 		<div class="span5">
 			<div class="whatsnew-heading">
 				Loop Number: <%= current_user.token%>
 			</div>	
-			<div class="whatsnew-part1">
-				
+			<div class="whatsnew-part1">	
 			</div>
 		</div>
-		
-		
+			
 	</div> 
 </div>	
