@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   has_many :loops, :dependent => :destroy
+  has_many :friendships
+  has_many :friends, :through => :friendships, :dependent => :destroy
   has_many :comments
   
   # Include default devise modules. Others available are:

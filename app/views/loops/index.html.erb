@@ -59,6 +59,9 @@
 				Loop Number: <%= current_user.token%>
 			</div>	
 			<div class="whatsnew-part1">
+				<% current_user.friendships.each do |friendship| %>
+				<%= friendship.friend %>
+				<% end %>
 			</div>
 		</div>
 		
