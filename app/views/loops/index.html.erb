@@ -8,6 +8,17 @@
 						My Contacts
 					</div>
 					
+					
+						<form class="search">
+						<%= search_form_for @search do |f| %>
+						<%= f.text_field :firstname_cont %>
+					
+						<div class="actions">
+						<%= f.submit %>
+						</div>
+					
+						
+						
 			<div class="contact-list">
 			<% if current_user.loops.count == 0 %>
 			You have not added anyone to your loop yet, click <%= link_to "Add Contact", new_loop_path %> to begin. 
@@ -51,6 +62,8 @@
 							<hr>
 					<% end %>
 					<% end %>
+					<% end %>
+					
 					
 				
 			</div>	

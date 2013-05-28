@@ -4,7 +4,9 @@ class LoopsController < ApplicationController
   # GET /loops.json
   def index
     @user = current_user
-    @loops = @user.loops.all(:order => :date)
+    @search = @user.loops.search(params[:q]) 
+    @loops = @search.result 
+ 
 
     respond_to do |format|
       format.html # index.html.erb
@@ -27,8 +29,10 @@ class LoopsController < ApplicationController
   # GET /loops/new
   # GET /loops/new.json
   def new
-    @loop = Loop.new
-
+      @loop = Loop.new
+       @search = User.search(params[:q])
+       @users = @search.result
+  
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @loop }
