@@ -1,0 +1,21 @@
+<h1>Listing friendshipcomments</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @friendshipcomments.each do |friendshipcomment| %>
+  <tr>
+    <td><%= link_to 'Show', friendshipcomment %></td>
+    <td><%= link_to 'Edit', edit_friendshipcomment_path(friendshipcomment) %></td>
+    <td><%= link_to 'Destroy', friendshipcomment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Friendshipcomment', new_friendshipcomment_path %>

@@ -1,0 +1,17 @@
+<%= form_for(@friendshipcomment) do |f| %>
+  <% if @friendshipcomment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@friendshipcomment.errors.count, "error") %> prohibited this friendshipcomment from being saved:</h2>
+
+      <ul>
+      <% @friendshipcomment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

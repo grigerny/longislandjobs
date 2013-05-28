@@ -1,7 +1,7 @@
 Longislandjoblink::Application.routes.draw do
   
   resources :friendships do 
-    resources :comments
+    resources :friendshipcomments
   end 
 
   devise_for :users
