@@ -1,93 +1,72 @@
 <%= render '/loops/dashbarindex' %>
 
 
-<%= search_form_for @search do |f| %>
-<%= f.text_field :token_eq %><br>
 <% @users.each do |user| %>
-<%= user.firstname %> <%= user.lastname%>
-<% end %>
-<% end %>
 
-
-
-<div class="container">
-	<div class="row-fluid">
-		
-			<div class="span7">
-					<div id="contact-list-heading">
-						My Contacts
-					</div>
-
-
-	<div class="contact-list">
-	<% if current_user.loops.count == 0 %>
-	You have not added anyone to your loop yet, click <%= link_to "Add Contact", new_loop_path %> to begin. 
-	<% else %>
-			<% @loops.each do |loop| %>
-			
-			<div class="row-fluid">
-				
-			<div class="span10">
-				<div id="loop-name">
-				<%= link_to loop, :class => "loop-name-css" do %>
-					<%= loop.firstname + " " + loop.lastname %>
-					<% end %> 
-						<div id="loop-time-ago">
-				        | <%= loop.date.strftime('%b %d, %Y')%> 
+	<div class="container">
+	<div class="show-wrapper">	
+				<div class="row-fluid">
+					<div class="span9">
+						<div class="title">
+							<%= user.firstname %> <%= user.lastname %> 
+							</div>
+						<div class="how-we-met-wrapper">
+					 		<div id="how-we-met-location"> 
+								<%= link_to friendships_path(:friend_id => user), :method => :post do  %><br>
+								<%= "add" %>
+								<% end %>
+								
+						</div><br>
 						</div>
-				</div>
-				<div class="loop-title">
-				<%= loop.title %>
-				</div>
-			</div>
-	
-
-			<div class="span1">
-					<div id="loop-index-edit">
-					<%= link_to edit_loop_path(loop), :class => "btn" do %>
-					<%= 'Edit' %>
-					<% end %>
-					</div>			
-			</div>
-			
-			<div class="span1">
-					<div id="loop-index-delete">
-					<%= link_to loop_path(loop), :method => :delete, :confirm => "Are you sure?", :class => "btn" do %>
-					<%= 'Delete' %>
-					<% end %>
 					</div>
-			</div>		
-		
-			</div>
-					<hr>
-			<% end %>
-			<% end %>
-	
+					
+					
+				
+				
+				<div class="span3">
+					<div id="contact-heading">
+						Contact info
+					</div>
+
+					<div class="row-fluid">
+						<div class="span12">
+							<div id="contact-field-css">
+								Title
+								</div>
+							<div id="contact-answer-css">
+							<%= user.title %>
+							</div>
+							<br>
+							<div id="contact-field-css">
+								Industry
+								</div>
+							<div id="contact-answer-css">
+							<%= user.industry %>
+							</div>
+							<br>
+							<div id="contact-field-css">
+								Phone
+								</div>
+							<div id="contact-answer-css">
+							<%= user.phone %>
+							</div>
+							<br>
+							<div id="contact-field-css">
+							Email
+							</div>
+							<div id="contact-answer-css">
+							<%= mail_to "#{user.email}" %>
+							</div>
+							<br>
+							<div id="contact-field-css">
+								Website:
+								</div>
+							<div id="contact-answer-css"><%= link_to "#{user.website}", user.website %></div>
+						</div>
+					</div>
+		  		</div>
+			</div>	
+
+<% end %>
+
 			
-			
-		
-	</div>	
-	
-		<div id="friendship-loop">
-		<% current_user.friendships.each do |friendship| %>
-		<%= link_to friendship, :class => "loop-name-css" do %>
-		<%= friendship.friend.firstname %> <%= friendship.friend.lastname %>
-		<% end %>
-		<%= friendship.friend.title %>
-		</div>
-		<% end %>
-		
-</div>			
-
-<div class="span5">
-	<div class="whatsnew-heading">
-		Loop Number: <%= current_user.token%>
-	</div>	
-	<div class="whatsnew-part1">
-		
-	</div>
-</div>
-
-
-</div> 
-</div>	

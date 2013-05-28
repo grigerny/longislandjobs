@@ -7,21 +7,25 @@
 			<div id="contact-list-heading">
 						My Contacts
 					</div>
-															
+				
+			<div class="span12">
+																
 			<div class="contact-list">
 				
-					<form class="search">
-					<%= search_form_for @search do |f| %>
-					<%= f.text_field :firstname_cont %>
-					</form>
-				
-					<div class="actions">
-					<%= f.submit %>
-					</div>
-				
+			
 					<% if current_user.loops.count == 0 %>
 					You have not added anyone to your loop yet, click <%= link_to "Add Contact", new_loop_path %> to begin. 
-						<% else %>
+					<% else %>
+					
+							<form class="search">
+							<%= search_form_for @search do |f| %>
+							<%= f.text_field :firstname_cont %>
+							</form>
+
+							<div class="actions">
+							<%= f.submit %>
+							</div>
+					
 						
 					<% @loops.each do |loop| %>
 					
@@ -57,19 +61,13 @@
 							<% end %>
 							</div>
 						</div>		
+			
+					<% end %>
 				
-					
-				<% end %>
-				
-				<% end %>
-				
-				<% end %>
-					
 					</div>
-				<hr>
+			
 			</div>
-					
-			</div>
+		
 				
 			<div id="friendship-loop">
 				<% current_user.friendships.each do |friendship| %>
@@ -79,11 +77,13 @@
 				<%= friendship.friend.title %>
 				<% end %>
 			</div>
-			
-			
-			
-				
+						
+			</div>
 		</div>
+			</div>
+		<% end %>
+		<% end %>
+			
 		
 		<div class="span5">
 			<div class="whatsnew-heading">

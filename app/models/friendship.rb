@@ -4,4 +4,5 @@ class Friendship < ActiveRecord::Base
   has_many :friendshipcomments
   
   attr_accessible :friend_id, :user_id
+  
 end

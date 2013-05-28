@@ -7,10 +7,10 @@ class FriendshipsController < ApplicationController
 
     respond_to do |format|
       if @friendship.save
-        format.html { redirect_to root_url, notice: 'This person has been added' }
+        format.html { redirect_to loops_path, notice: 'Added successfully' }
         format.json { render json: @friendship, status: :created, location: @friendship }
       else
-        format.html { render action: "new" }
+        format.html { render loops_path, notice: 'You have already added this user' }
         format.json { render json: @friendship.errors, status: :unprocessable_entity }
       end
     end

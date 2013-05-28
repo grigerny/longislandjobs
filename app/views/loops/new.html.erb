@@ -1,20 +1,29 @@
 <%= render 'dashboardnew'%>
 
+<div class="container">
+	
+<div class="row-fluid">	
+	<div class="span12">
+		<div id="find-token-heading">
+			Add a contact instantly if you know the loop number:
+			</div>
+
 <%= search_form_for @search do |f| %>
-<%= f.text_field :token_eq %><br>
-<% @users.each do |user| %>
-<%= user.token %><br>
-<%= user.firstname %>
-<% end %>
+<%= f.text_field :token_eq, :class => "find-token-field" %>
+<br>
 <% end %>
 
-<div class="container">
+
+	</div>
+</div>
+
 	<div class="row-fluid">
-		<div class="span7">
+		<div class="span12">
 				<div id="contact-list-heading">
-					Add Contact
+					Otherwise, add a contact manually:
 				</div>
 		</div>		
 	</div>				
+	
 <%= render 'addform' %>
 </div>
