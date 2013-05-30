@@ -29,8 +29,8 @@ class LoopsController < ApplicationController
   # GET /loops/new
   # GET /loops/new.json
   def new
-    
-       @search = User.search(params[:q])
+ 
+        @search = User.search(params[:q]) 
        @users = @search.result 
        @loop = Loop.new
 

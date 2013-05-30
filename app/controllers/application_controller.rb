@@ -7,4 +7,10 @@ class ApplicationController < ActionController::Base
     @newsletter = Newsletter.new
   end
   
+  before_filter :set_search
+
+  def set_search
+    @search = User.search(params[:q])
+  end
+  
 end
