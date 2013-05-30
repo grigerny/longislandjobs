@@ -2,8 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.add-contact-button-wrapper{
-	float:left;
+.add-contact-wrapper{
+	height:200px;
+	background:RGBA(240.00, 246.00, 251.00, 1.00);
+	border:1px solid lightgray;
+	color:RGBA(100.00, 100.00, 100.00, 1.00);
+	font-size:24px;
+	font-weight:400;
+	font-family: 'Roboto', sans-serif;
+	padding:40px;
+	line-height:40px;
 }
-       
         
+.add-contact-button-wrapper{
+	margin-top:40px;
+}

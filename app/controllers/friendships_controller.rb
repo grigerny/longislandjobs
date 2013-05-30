@@ -23,7 +23,7 @@ class FriendshipsController < ApplicationController
     @friendship.destroy
 
     respond_to do |format|
-      format.html { redirect_to root_url, notice: 'This person has been removed' }
+      format.html { redirect_to loops_path, notice: 'This person has been removed' }
       format.json { head :no_content }
     end
   end
