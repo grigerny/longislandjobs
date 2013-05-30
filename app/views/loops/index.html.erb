@@ -12,11 +12,7 @@
 					
 								<form class="search">
 										<%= search_form_for @search do |f| %>
-										<%= f.text_field :firstname_cont %>
-
-										<div class="actions">
-										<%= f.submit %>
-										</div>
+										<%= f.text_field :firstname_cont, :class =>"search-css", :placeholder => "Search" %>
 								</form>
 								
 				</div>
