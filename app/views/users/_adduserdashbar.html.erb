@@ -1,0 +1,29 @@
+<div class="row-fluid">
+	<div class="span12">
+		<div id="second-bar">	
+			
+			<div class="span9">
+
+				<div id="loop-dashboard-addcontact">
+				<%= link_to new_loop_path, :class => "add-contact-to-loop" do %>
+				<div class="btn"> <i class="icon-plus"></i> Add contact</div>
+				<% end %>
+				</div>
+			</div>	
+			
+			<div class="span3">
+				<% if user_signed_in? %>
+				<div id="user-login">
+				 	<%= link_to destroy_user_session_path, method: :delete, :class => "logout-link"  do  %>
+					<div class="btn">
+					<%= "Logout" %>
+					</div>
+				</div>	
+				<% end %>
+				<% end %>
+			</div>
+			
+					
+		</div>	
+	</div>
+</div>

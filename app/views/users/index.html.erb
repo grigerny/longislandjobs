@@ -1,4 +1,4 @@
-<%= render '/loops/dashbarindex' %>
+<%= render 'adduserdashbar' %>
 
 
 <% @users.each do |user| %>
@@ -12,11 +12,12 @@
 							</div>
 						<div class="how-we-met-wrapper">
 					 		<div id="how-we-met-location"> 
-								<%= link_to friendships_path(:friend_id => user), :method => :post do  %><br>
-								<%= "add" %>
+									<div class="add-contact-button-wrapper">
+								<%= link_to friendships_path(:friend_id => user), :class => "btn", :method => :post do  %>
+								<%= "Click here to save #{user.firstname} to your dashboard"  %>
 								<% end %>
-								
-						</div><br>
+									</div>
+							</div>
 						</div>
 					</div>
 					
