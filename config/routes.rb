@@ -3,6 +3,7 @@ Longislandjoblink::Application.routes.draw do
   resources :friendships do 
     resources :friendshipcomments
   end 
+  
 
   devise_for :users
 
@@ -18,6 +19,7 @@ Longislandjoblink::Application.routes.draw do
 
   resources :newsletters
   resources :users
+
 
 
   # The priority is based upon order of creation:

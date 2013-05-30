@@ -29,10 +29,11 @@ class LoopsController < ApplicationController
   # GET /loops/new
   # GET /loops/new.json
   def new
-      @loop = Loop.new
+    
        @search = User.search(params[:q])
-       @users = @search.result
-  
+       @users = @search.result 
+       @loop = Loop.new
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @loop }

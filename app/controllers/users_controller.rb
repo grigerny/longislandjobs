@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   def index
-     @loops = current_user.loops
+     @user = current_user
+     @loops = @user.loops
      @search = User.search(params[:q])
-     @users = @search.result
+     @users = @search.result(:distinct => true)
   end
 end
