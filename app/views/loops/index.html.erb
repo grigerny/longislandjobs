@@ -58,19 +58,20 @@
 						<% end %>
 						<% end %>
 	
+					<div class="row-fluid">
 					<% current_user.friendships.each do |friendship| %>
 					<div class="contact-list-friends">
 						<div class="span10">
 							<div id="loop-name">
-				<%= link_to friendship, :class => "loop-name-css" do %>						
-				<%= friendship.friend.firstname %> <%= friendship.friend.lastname %>
-				<% end %>
-					<div id="loop-time-ago">
-			        | <%= friendship.created_at.strftime('%b %d, %Y') %> 
-					</div>
+								<%= link_to friendship, :class => "loop-name-css" do %>						
+									<%= friendship.friend.firstname %> <%= friendship.friend.lastname %>
+									<% end %>
+									<div id="loop-time-ago">
+			        					| <%= friendship.created_at.strftime('%b %d, %Y') %> 
+									</div>
 							</div>
 							<div class="loop-title">
-				<%= friendship.friend.title %>
+								<%= friendship.friend.title %>
 							</div>
 							<hr>
 						</div>
@@ -82,7 +83,9 @@
 								<% end %>
 							</div>
 						</div>		
+					</div>
 				<% end %>
+				
 					
 					</div>
 				
