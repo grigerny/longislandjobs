@@ -38,39 +38,57 @@
 							<div class="loop-title">
 								<%= loop.title %>
 							</div>
+							<hr>
 					
 						</div>
 			
 							<div class="span1">
-							<div id="loop-index-edit">
+								<div id="loop-index-edit">
 								<%= link_to edit_loop_path(loop), :class => "btn" do %>
 									<%= 'Edit' %>
 									<% end %>
-							</div>			
+								</div>			
 						</div>
 					
 							<div class="span1">
-							<div id="loop-index-delete">
+								<div id="loop-index-delete">
 								<%= link_to loop_path(loop), :method => :delete, :confirm => "Are you sure?", :class => "btn" do %>
 								<%= 'Delete' %>
 								<% end %>
-							</div>
+								</div>
 							</div>		
 						</div>
 					
 						<% end %>
 						<% end %>
-				</div>
-			</div>	
-			<div class="row-fluid">
-				<div class="span12">
-		
-				<% current_user.friendships.each do |friendship| %>
-				<%= link_to friendship, :class => "loop-name-css" do %>
+	
+					<% current_user.friendships.each do |friendship| %>
+					<div class="contact-list-friends">
+						<div class="span10">
+							<div id="loop-name">
+				<%= link_to friendship, :class => "loop-name-css" do %>						
 				<%= friendship.friend.firstname %> <%= friendship.friend.lastname %>
-				<% end %><br>
-				<%= friendship.friend.title %>
 				<% end %>
+					<div id="loop-time-ago">
+			        | <%= friendship.created_at.strftime('%b %d, %Y') %> 
+					</div>
+							</div>
+							<div class="loop-title">
+				<%= friendship.friend.title %>
+							</div>
+							<hr>
+						</div>
+						
+						<div class="span2">
+							<div id="loop-index-delete">
+								<%= link_to friendship_path(friendship), :method => :delete, :confirm => "Are you sure?", :class => "btn" do %>
+								<%= 'Delete' %>
+								<% end %>
+							</div>
+						</div>		
+				<% end %>
+					
+					</div>
 				
 				</div>
 			</div>	
