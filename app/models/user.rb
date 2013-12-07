@@ -16,7 +16,6 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   
   before_create :generate_token
-  validates_presence_of :token
 
    protected
 
